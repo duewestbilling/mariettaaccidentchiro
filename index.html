@@ -297,6 +297,106 @@
   .main-site-link { display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.78rem; border:1px solid rgba(255,255,255,0.18); padding:9px 16px; transition:all 0.2s; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; }
   .main-site-link:hover { color:white; border-color:rgba(255,255,255,0.3); }
   .footer-bottom { display:flex; justify-content:space-between; font-size:0.72rem; color:rgba(255,255,255,0.58); flex-wrap:wrap; gap:9px; }
+
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 768px) {
+
+    /* Navigation */
+    nav { padding:0 20px; height:64px; }
+    .logo-main { font-size:1.1rem; }
+    .logo-sub { display:none; }
+    .nav-links { display:none; }
+
+    /* Emergency Bar */
+    .emergency-bar { font-size:0.78rem; padding:10px 16px; }
+
+    /* Hero */
+    .hero-content { grid-template-columns:1fr; gap:32px; padding:80px 24px 48px; }
+    .hero h1 { font-size:4rem; }
+    .hero-sub { font-size:0.97rem; margin:18px 0 28px; }
+    .hero-tag { font-size:0.65rem; letter-spacing:0.1em; }
+    .hero-actions { flex-direction:column; }
+    .btn-red { width:100%; justify-content:center; padding:16px 24px; font-size:1.1rem; }
+    .btn-outline-w { width:100%; justify-content:center; padding:14px 24px; }
+    .hero-panel { padding:24px; }
+    .panel-title { font-size:1.2rem; }
+    .urgency-item p { font-size:0.78rem; }
+
+    /* Stat Divider */
+    .stat-divider { gap:24px; padding:16px 20px; }
+    .stat-d { font-size:0.72rem; gap:8px; }
+    .stat-d span { font-size:1.4rem; }
+
+    /* Shared sections */
+    .sec { padding:56px 24px; }
+    .sec-title { font-size:2.4rem; }
+
+    /* Why section */
+    .why-header { grid-template-columns:1fr; gap:16px; margin-bottom:32px; }
+    .why-grid { grid-template-columns:1fr; gap:12px; }
+    .why-card { padding:24px 20px; }
+
+    /* Experience */
+    .exp-inner { grid-template-columns:1fr; gap:40px; }
+    .exp-stats { grid-template-columns:1fr 1fr; gap:10px; }
+    .exp-stat { padding:20px 16px; }
+    .exp-stat strong { font-size:2.2rem; }
+
+    /* Process */
+    .proc-steps { grid-template-columns:1fr; gap:32px; }
+    .proc-steps::before { display:none; }
+    .proc-step { display:flex; align-items:flex-start; gap:16px; text-align:left; padding:0; }
+    .step-num { width:52px; height:52px; font-size:1.2rem; flex-shrink:0; margin:0; }
+    .proc-step h4 { margin-bottom:4px; }
+
+    /* Injuries */
+    .inj-inner { grid-template-columns:1fr; gap:32px; }
+    .inj-grid { grid-template-columns:1fr; gap:10px; }
+
+    /* Attorney */
+    .atty-inner { grid-template-columns:1fr; gap:36px; }
+
+    /* Dr. Mattson */
+    .dr-inner { grid-template-columns:1fr; gap:28px; }
+    .dr-name { font-size:1.6rem; }
+
+    /* Testimonials */
+    .test-grid { grid-template-columns:1fr; gap:12px; }
+
+    /* Contact */
+    .contact-inner { grid-template-columns:1fr; gap:32px; }
+    .booking-form { padding:28px 20px; }
+    .form-row { grid-template-columns:1fr; gap:0; }
+
+    /* Footer */
+    footer { padding:36px 24px 24px; }
+    .footer-top { grid-template-columns:1fr; gap:24px; flex-direction:column; }
+    .footer-links { gap:16px; }
+    .footer-bottom { flex-direction:column; gap:8px; }
+
+    /* Mobile call button - fixed at bottom */
+    .mobile-call-bar {
+      display:flex !important;
+      position:fixed;
+      bottom:0; left:0; right:0;
+      background:var(--red);
+      color:white;
+      text-align:center;
+      padding:16px;
+      font-family:'Bebas Neue',sans-serif;
+      font-size:1.3rem;
+      letter-spacing:0.1em;
+      text-decoration:none;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      z-index:999;
+      box-shadow:0 -4px 20px rgba(230,0,0,0.4);
+    }
+  }
+
+  /* Hide mobile call bar on desktop */
+  .mobile-call-bar { display:none; }
 </style>
 </head>
 <body>
@@ -369,6 +469,36 @@
   <div class="stat-d"><span>Same</span> Day Often Available</div>
   <div class="stat-d"><span>Multiple</span> Attorney Relationships</div>
 </div>
+
+<!-- DR. MATTSON BIO -->
+<section class="sec dr-bg">
+  <div class="sec-inner">
+    <div class="dr-inner">
+      <!-- PHOTO: bob.jpg uploaded to GitHub -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <img src="bob.jpg" alt="Dr. Robert Mattson - Due West Chiropractic Marietta GA"
+          onerror="this.style.display='none';"
+          style="width:100%;border-radius:4px;border-top:4px solid #e60000;object-fit:cover;object-position:top;max-height:480px;image-rendering:auto;">
+      </div>
+      <div>
+        <div class="sec-tag">About Your Doctor</div>
+        <div class="dr-name">Dr. Robert "Bob" Mattson</div>
+        <div class="dr-title-r">Doctor of Chiropractic · Due West Chiropractic &amp; Rehab · Marietta, GA</div>
+        <p class="dr-bio">Dr. Mattson is the founder and owner of Due West Chiropractic &amp; Rehab in Marietta, Georgia — a family owned practice he and his wife Molly have built together since 2007. He serves auto accident patients throughout Marietta, West Cobb, Kennesaw, Acworth, Powder Springs, and Paulding County, and has developed deep expertise in personal injury care that has earned him the trust of patients and attorneys alike across the greater Atlanta area.</p>
+        <p class="dr-bio">A graduate of Life University and Youngstown State University, he treats every accident patient with the same individualized attention — building a treatment plan that supports both your physical recovery and your legal case.</p>
+        <ul class="dr-creds">
+          <li>Doctor of Chiropractic – Life University</li>
+          <li>B.S. – Youngstown State University</li>
+          <li>Personal Injury expertise since 2007</li>
+          <li>Active PI attorney referral relationships — Atlanta metro</li>
+          <li>MedPay, health insurance &amp; PI lien billing</li>
+          <li>MRI &amp; specialist referral network</li>
+          <li>Founder — Due West Chiropractic &amp; Rehab, Marietta GA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WHY DR. MATTSON -->
 <section class="sec why-bg" id="why">
@@ -537,41 +667,6 @@
   </div>
 </section>
 
-<!-- DR. MATTSON BIO -->
-<section class="sec dr-bg">
-  <div class="sec-inner">
-    <div class="dr-inner">
-      <!-- PHOTO: Replace the src below with your actual photo file name e.g. src="bob.jpg" -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <img src="bob.jpg" alt="Dr. Robert Mattson - Due West Chiropractic Marietta GA"
-          onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex';"
-          style="width:100%;border-radius:4px;border-top:4px solid #e60000;object-fit:cover;max-height:420px;">
-        <div id="photo-fallback" class="photo-box" style="display:flex;">
-          <div class="p-icon">📸</div>
-          <div class="p-label">Dr. Bob Mattson</div>
-          <div class="p-sub">Upload bob.jpg to GitHub alongside index.html to show photo here</div>
-        </div>
-      </div>
-      <div>
-        <div class="sec-tag">About Your Doctor</div>
-        <div class="dr-name">Dr. Robert "Bob" Mattson</div>
-        <div class="dr-title-r">Doctor of Chiropractic · Due West Chiropractic &amp; Rehab · Marietta, GA</div>
-        <p class="dr-bio">Dr. Mattson is the founder and owner of Due West Chiropractic &amp; Rehab in Marietta, Georgia — a family owned practice he and his wife Molly have built together since 2007. He serves auto accident patients throughout Marietta, West Cobb, Kennesaw, Acworth, Powder Springs, and Paulding County, and has developed deep expertise in personal injury care that has earned him the trust of patients and attorneys alike across the greater Atlanta area.</p>
-        <p class="dr-bio">A graduate of Life University and Youngstown State University, he treats every accident patient with the same individualized attention — building a treatment plan that supports both your physical recovery and your legal case.</p>
-        <ul class="dr-creds">
-          <li>Doctor of Chiropractic – Life University</li>
-          <li>B.S. – Youngstown State University</li>
-          <li>Personal Injury expertise since 2007</li>
-          <li>Active PI attorney referral relationships — Atlanta metro</li>
-          <li>MedPay, health insurance &amp; PI lien billing</li>
-          <li>MRI &amp; specialist referral network</li>
-          <li>Founder — Due West Chiropractic &amp; Rehab, Marietta GA</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section class="sec test-bg">
   <div class="sec-inner">
@@ -714,6 +809,11 @@
 <div style="display:none;" aria-hidden="true">
   Auto accident chiropractor Marietta GA. Car accident chiropractor Kennesaw GA. Auto injury chiropractor Acworth GA. Car accident chiropractor West Cobb GA. Auto accident chiropractor Powder Springs GA. Car accident chiropractor Paulding County GA. Personal injury chiropractor Marietta. Whiplash treatment Marietta GA. Whiplash treatment Kennesaw GA. Chiropractor after car accident Marietta. Chiropractor after car accident Kennesaw. Chiropractor after car accident Acworth. Same day accident chiropractor Marietta. Personal injury chiropractor West Cobb. MedPay chiropractor Marietta GA. Dr Robert Mattson chiropractor Marietta GA.
 </div>
+
+<!-- Mobile Fixed Call Bar - only shows on phones -->
+<a href="tel:7704295555" class="mobile-call-bar">
+  📞 CALL NOW — (770) 429-5555
+</a>
 
 </body>
 </html>
