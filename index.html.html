@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Accident Chiropractor | Marietta, Kennesaw, Acworth, Powder Springs | Dr. Robert Mattson</title>
+<meta name="description" content="Hurt in a car accident in Marietta, Kennesaw, Acworth, West Cobb, Powder Springs or Paulding County? Dr. Mattson has treated auto accident patients since 2007. Same-day & 48-hour guaranteed appointments. Works directly with PI attorneys.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #e60000;
+    --dark-red: #b30000;
+    --bright-red: #ff1a1a;
+    --black: #1c1c1c;
+    --dark: #2a2a2a;
+    --mid: #333333;
+    --card: #3d3d3d;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --gray: #cccccc;
+    --light-gray: #f0f0f0;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:'Barlow',sans-serif;
+    background:var(--black);
+    color:var(--white);
+    overflow-x:hidden;
+  }
+
+  /* ── EMERGENCY BAR ── */
+  .emergency-bar {
+    background:var(--red);
+    color:white;
+    text-align:center;
+    padding:12px 24px;
+    font-size:0.88rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+  .emergency-bar a { color:white; text-decoration:underline; }
+
+  /* ── NAV ── */
+  nav {
+    background:var(--black);
+    border-bottom:3px solid var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 60px;
+    height:76px;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  .logo-block { display:flex; flex-direction:column; }
+  .logo-main { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:white; letter-spacing:0.1em; line-height:1; }
+  .logo-sub { font-size:0.63rem; color:var(--red); text-transform:uppercase; letter-spacing:0.15em; font-weight:700; margin-top:3px; }
+  .nav-links { display:flex; gap:28px; list-style:none; align-items:center; }
+  .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.82rem; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; transition:color 0.2s; }
+  .nav-links a:hover { color:white; }
+  .nav-phone { color:var(--red) !important; font-weight:700 !important; font-size:1rem !important; font-family:'Bebas Neue',sans-serif !important; letter-spacing:0.1em !important; }
+  .nav-cta { background:var(--red) !important; color:white !important; padding:11px 22px !important; font-weight:700 !important; border-radius:2px; }
+  .nav-cta:hover { background:var(--bright-red) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height:100vh;
+    background:var(--black);
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-bg {
+    position:absolute; inset:0;
+    background:
+      linear-gradient(135deg,rgba(139,0,0,0.35) 0%,transparent 55%),
+      radial-gradient(ellipse at 80% 50%,rgba(204,0,0,0.12) 0%,transparent 60%);
+  }
+  .hero-lines {
+    position:absolute; inset:0;
+    background-image:repeating-linear-gradient(90deg,transparent,transparent 98px,rgba(204,0,0,0.04) 98px,rgba(204,0,0,0.04) 100px);
+  }
+  .hero-content {
+    position:relative; z-index:2;
+    max-width:1280px; margin:0 auto;
+    padding:100px 60px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:80px;
+    align-items:center;
+  }
+  .hero-tag {
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(204,0,0,0.15);
+    border:1px solid var(--red);
+    color:var(--red);
+    padding:8px 18px;
+    font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:700;
+    margin-bottom:26px;
+  }
+  .hero-tag::before { content:''; width:8px; height:8px; background:var(--red); border-radius:50%; animation:blink 1.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+  .hero h1 { font-family:'Bebas Neue',sans-serif; font-size:6.8rem; line-height:0.88; letter-spacing:0.03em; color:white; margin-bottom:10px; }
+  .hero h1 .red { color:var(--red); }
+  .hero h1 .outline { -webkit-text-stroke:2px white; color:transparent; }
+  .hero-sub { font-size:1.1rem; color:rgba(255,255,255,0.85); line-height:1.7; margin:26px 0 38px; font-weight:300; max-width:520px; }
+  .hero-actions { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+
+  .btn-red {
+    background:var(--red); color:white;
+    padding:18px 34px;
+    font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.1em;
+    text-decoration:none; border:none; cursor:pointer;
+    transition:all 0.2s; display:inline-flex; align-items:center; gap:10px;
+    clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+  }
+  .btn-red:hover { background:var(--bright-red); transform:translateY(-2px); box-shadow:0 8px 28px rgba(204,0,0,0.45); }
+
+  .btn-outline-w {
+    background:transparent; color:white;
+    padding:16px 30px;
+    font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.1em;
+    text-decoration:none; border:2px solid rgba(255,255,255,0.40);
+    transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+  }
+  .btn-outline-w:hover { border-color:white; background:rgba(255,255,255,0.12); }
+
+  /* Hero right panel */
+  .hero-panel {
+    background:var(--dark);
+    border:1px solid rgba(204,0,0,0.3);
+    border-top:4px solid var(--red);
+    padding:36px;
+  }
+  .panel-title { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.08em; color:white; margin-bottom:22px; padding-bottom:16px; border-bottom:1px solid rgba(255,255,255,0.12); }
+  .urgency-item { display:flex; align-items:flex-start; gap:13px; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.12); }
+  .urgency-item:last-of-type { border-bottom:none; margin-bottom:0; }
+  .u-icon { width:40px; height:40px; background:rgba(204,0,0,0.15); border:1px solid rgba(204,0,0,0.3); display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+  .urgency-item h4 { font-weight:700; color:white; font-size:0.85rem; margin-bottom:3px; text-transform:uppercase; letter-spacing:0.05em; }
+  .urgency-item p { color:rgba(255,255,255,0.75); font-size:0.8rem; line-height:1.5; font-weight:300; }
+  .call-box { background:var(--red); padding:18px; text-align:center; margin-top:20px; cursor:pointer; transition:background 0.2s; }
+  .call-box:hover { background:var(--bright-red); }
+  .call-box p { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.15em; color:rgba(255,255,255,0.8); margin-bottom:5px; font-weight:600; }
+  .call-box strong { font-family:'Bebas Neue',sans-serif; font-size:1.9rem; letter-spacing:0.1em; color:white; }
+
+  /* ── STAT DIVIDER ── */
+  .stat-divider { background:var(--red); padding:18px 60px; display:flex; justify-content:center; gap:72px; flex-wrap:wrap; }
+  .stat-d { display:flex; align-items:center; gap:12px; color:white; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; }
+  .stat-d span { font-family:'Bebas Neue',sans-serif; font-size:1.75rem; letter-spacing:0.05em; }
+
+  /* ── SHARED ── */
+  .sec { padding:92px 60px; }
+  .sec-inner { max-width:1280px; margin:0 auto; }
+  .sec-tag { font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); font-weight:700; margin-bottom:11px; display:flex; align-items:center; gap:10px; }
+  .sec-tag::before { content:''; display:inline-block; width:28px; height:2px; background:var(--red); }
+  .sec-title { font-family:'Bebas Neue',sans-serif; font-size:3.4rem; letter-spacing:0.04em; color:white; line-height:1; margin-bottom:18px; }
+  .sec-sub { color:rgba(255,255,255,0.75); font-size:0.97rem; line-height:1.7; font-weight:300; max-width:560px; }
+
+  /* ── WHY DR. MATTSON ── */
+  .why-bg { background:var(--dark); }
+  .why-header { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:end; margin-bottom:56px; }
+  .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+  .why-card { background:var(--mid); padding:36px 28px; border-bottom:3px solid transparent; transition:all 0.3s; cursor:pointer; }
+  .why-card:hover { border-bottom-color:var(--red); background:var(--card); transform:translateY(-3px); }
+  .why-num { font-family:'Bebas Neue',sans-serif; font-size:3.2rem; color:rgba(204,0,0,0.28); line-height:1; margin-bottom:14px; transition:color 0.3s; }
+  .why-card:hover .why-num { color:var(--red); }
+  .why-card h3 { font-weight:700; font-size:0.93rem; color:white; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.05em; }
+  .why-card p { color:rgba(255,255,255,0.88); font-size:0.845rem; line-height:1.6; font-weight:300; }
+
+  /* ── EXPERIENCE ── */
+  .exp-bg { background:var(--black); }
+  .exp-inner { display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:center; }
+  .exp-stats { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+  .exp-stat { background:var(--dark); padding:32px 24px; border-left:3px solid var(--red); }
+  .exp-stat strong { display:block; font-family:'Bebas Neue',sans-serif; font-size:2.8rem; color:white; letter-spacing:0.04em; line-height:1; margin-bottom:6px; }
+  .exp-stat span { color:rgba(255,255,255,0.88); font-size:0.77rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:600; }
+  .exp-quote { border-left:4px solid var(--red); padding-left:28px; margin:36px 0; }
+  .exp-quote p { font-size:1.15rem; font-style:italic; color:rgba(255,255,255,0.88); line-height:1.6; font-weight:300; margin-bottom:10px; }
+  .exp-quote cite { color:var(--red); font-size:0.77rem; text-transform:uppercase; letter-spacing:0.1em; font-style:normal; font-weight:700; }
+  .exp-list { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .exp-list li { display:flex; align-items:flex-start; gap:12px; color:rgba(255,255,255,0.85); font-size:0.93rem; line-height:1.5; }
+  .exp-list li::before { content:'▶'; color:var(--red); font-size:0.58rem; margin-top:5px; flex-shrink:0; }
+
+  /* ── PROCESS ── */
+  .proc-bg { background:var(--dark); }
+  .proc-header { text-align:center; margin-bottom:60px; }
+  .proc-header .sec-tag { justify-content:center; }
+  .proc-header .sec-tag::before { display:none; }
+  .proc-header .sec-sub { margin:0 auto; text-align:center; }
+  .proc-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative; }
+  .proc-steps::before { content:''; position:absolute; top:34px; left:10%; right:10%; height:2px; background:linear-gradient(90deg,var(--red),rgba(204,0,0,0.15)); z-index:0; }
+  .proc-step { text-align:center; padding:0 14px; position:relative; z-index:1; }
+  .step-num { width:68px; height:68px; background:var(--red); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1.55rem; color:white; margin:0 auto 20px; letter-spacing:0.05em; border:3px solid var(--dark); box-shadow:0 0 0 2px var(--red); }
+  .proc-step h4 { font-weight:700; color:white; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+  .proc-step p { color:rgba(255,255,255,0.70); font-size:0.76rem; line-height:1.6; }
+
+  /* ── INJURIES ── */
+  .inj-bg { background:var(--black); }
+  .inj-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+  .inj-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+  .inj-card { background:var(--dark); padding:24px 20px; border-top:3px solid transparent; transition:all 0.3s; }
+  .inj-card:hover { border-top-color:var(--red); background:var(--mid); }
+  .inj-card h4 { font-weight:700; color:white; font-size:0.88rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.05em; }
+  .inj-card p { color:rgba(255,255,255,0.88); font-size:0.8rem; line-height:1.55; font-weight:300; }
+  .inj-icon { font-size:1.4rem; margin-bottom:10px; }
+  .urgent-box { background:rgba(204,0,0,0.12); border:1px solid rgba(204,0,0,0.3); border-radius:4px; padding:22px; margin-top:20px; }
+  .urgent-box h4 { color:var(--red); font-weight:700; font-size:0.88rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+  .urgent-box p { color:rgba(255,255,255,0.82); font-size:0.85rem; line-height:1.6; font-weight:300; }
+
+  /* ── ATTORNEY SECTION ── */
+  .atty-bg {
+    background:linear-gradient(135deg,var(--dark-red) 0%,#a00000 50%,var(--dark-red) 100%);
+    position:relative; overflow:hidden;
+  }
+  .atty-bg::before { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(0,0,0,0.08) 40px,rgba(0,0,0,0.08) 42px); }
+  .atty-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; position:relative; z-index:2; }
+  .atty-inner .sec-tag { color:rgba(255,255,255,0.7); }
+  .atty-inner .sec-tag::before { background:rgba(255,255,255,0.5); }
+  .atty-inner .sec-title,.atty-inner .sec-sub { color:rgba(255,255,255,0.85); }
+  .atty-features { display:flex; flex-direction:column; gap:13px; margin-top:28px; }
+  .atty-feat { display:flex; align-items:center; gap:13px; background:rgba(0,0,0,0.18); padding:14px 18px; border-radius:3px; border-left:3px solid rgba(255,255,255,0.58); }
+  .atty-feat span { font-size:1.1rem; }
+  .atty-feat p { color:rgba(255,255,255,0.82); font-size:0.88rem; font-weight:500; }
+  .atty-cta-box { background:rgba(0,0,0,0.22); border:1px solid rgba(255,255,255,0.58); padding:36px; text-align:center; }
+  .atty-cta-box h3 { font-family:'Bebas Neue',sans-serif; font-size:1.9rem; letter-spacing:0.08em; color:white; margin-bottom:10px; }
+  .atty-cta-box p { color:rgba(255,255,255,0.85); font-size:0.88rem; margin-bottom:24px; line-height:1.6; }
+  .btn-white { background:white; color:var(--dark-red); padding:16px 32px; font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:0.1em; text-decoration:none; display:inline-flex; align-items:center; gap:9px; transition:all 0.2s; font-weight:700; cursor:pointer; border:none; width:100%; justify-content:center; margin-bottom:10px; }
+  .btn-white:hover { background:#f0f0f0; transform:translateY(-1px); }
+  .btn-ghost { background:rgba(255,255,255,0.18); color:white; padding:14px 32px; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:0.1em; text-decoration:none; display:inline-flex; align-items:center; gap:9px; transition:all 0.2s; border:1px solid rgba(255,255,255,0.40); width:100%; justify-content:center; cursor:pointer; }
+  .btn-ghost:hover { background:rgba(255,255,255,0.18); }
+
+  /* ── DR. MATTSON BIO ── */
+  .dr-bg { background:var(--dark); }
+  .dr-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+  .photo-box { background:rgba(255,255,255,0.07); border:2px dashed rgba(255,255,255,0.58); border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:36px 20px; gap:9px; min-height:240px; }
+  .photo-box .p-icon { font-size:2.2rem; }
+  .photo-box .p-label { color:rgba(255,255,255,0.88); font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; }
+  .photo-box .p-sub { color:rgba(255,255,255,0.38); font-size:0.7rem; }
+  .dr-name { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.06em; color:white; margin-bottom:3px; }
+  .dr-title-r { color:var(--red); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.12em; font-weight:700; margin-bottom:18px; }
+  .dr-bio { color:rgba(255,255,255,0.82); font-size:0.9rem; line-height:1.75; font-weight:300; margin-bottom:14px; }
+  .dr-creds { list-style:none; display:flex; flex-direction:column; gap:9px; margin-top:8px; }
+  .dr-creds li { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.85); font-size:0.85rem; }
+  .dr-creds li::before { content:''; width:6px; height:6px; background:var(--red); border-radius:50%; flex-shrink:0; }
+
+  /* ── TESTIMONIALS ── */
+  .test-bg { background:var(--black); }
+  .test-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:48px; }
+  .test-card { background:var(--dark); padding:32px; border-top:3px solid transparent; transition:border-color 0.3s; cursor:pointer; }
+  .test-card:first-child,.test-card:hover { border-top-color:var(--red); }
+  .stars { color:var(--red); font-size:0.88rem; letter-spacing:0.1em; margin-bottom:14px; }
+  .test-text { color:rgba(255,255,255,0.82); font-size:0.88rem; line-height:1.7; margin-bottom:20px; font-style:italic; font-weight:300; }
+  .test-name { font-weight:700; color:white; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; }
+  .test-name span { display:block; color:var(--red); font-weight:400; font-size:0.73rem; text-transform:none; letter-spacing:0; margin-top:3px; }
+
+  /* ── CONTACT FORM ── */
+  .contact-bg { background:var(--dark); }
+  .contact-inner { display:grid; grid-template-columns:1fr 1.3fr; gap:72px; align-items:start; }
+  .contact-info { display:flex; flex-direction:column; gap:20px; margin-top:28px; }
+  .c-item { display:flex; gap:13px; align-items:flex-start; padding-bottom:18px; border-bottom:1px solid rgba(255,255,255,0.12); }
+  .c-item:last-child { border-bottom:none; }
+  .c-icon { width:40px; height:40px; background:rgba(204,0,0,0.15); border:1px solid rgba(204,0,0,0.3); display:flex; align-items:center; justify-content:center; font-size:0.95rem; flex-shrink:0; }
+  .c-item h4 { font-weight:700; color:white; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px; }
+  .c-item p,.c-item a { color:rgba(255,255,255,0.75); font-size:0.858rem; line-height:1.5; text-decoration:none; }
+  .c-item a:hover { color:white; }
+  .booking-form { background:var(--mid); padding:44px; border:1px solid rgba(204,0,0,0.2); border-top:4px solid var(--red); }
+  .booking-form h3 { font-family:'Bebas Neue',sans-serif; font-size:1.9rem; letter-spacing:0.08em; color:white; margin-bottom:5px; }
+  .booking-form > p { color:rgba(255,255,255,0.88); font-size:0.845rem; margin-bottom:28px; line-height:1.5; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:13px; margin-bottom:13px; }
+  .form-group { margin-bottom:13px; }
+  .form-group label { display:block; font-size:0.68rem; font-weight:700; color:rgba(255,255,255,0.75); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px; }
+  .form-group input,.form-group select,.form-group textarea { width:100%; padding:12px 14px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.07); color:white; font-family:'Barlow',sans-serif; font-size:0.88rem; outline:none; transition:border-color 0.2s; border-radius:2px; }
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus { border-color:var(--red); background:rgba(204,0,0,0.04); }
+  .form-group select option { background:var(--mid); color:white; }
+  .form-group textarea { resize:vertical; min-height:88px; }
+  .form-submit { width:100%; background:var(--red); color:white; padding:17px; font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.15em; border:none; cursor:pointer; transition:all 0.2s; }
+  .form-submit:hover { background:var(--bright-red); transform:translateY(-1px); box-shadow:0 4px 20px rgba(204,0,0,0.45); }
+  .form-disclaimer { color:rgba(255,255,255,0.58); font-size:0.7rem; text-align:center; margin-top:10px; line-height:1.5; }
+
+  /* ── FOOTER ── */
+  footer { background:#050505; padding:44px 60px 28px; border-top:3px solid var(--red); }
+  .footer-inner { max-width:1280px; margin:0 auto; }
+  .footer-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,0.10); gap:36px; flex-wrap:wrap; }
+  .footer-brand p { color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:7px; max-width:380px; line-height:1.6; }
+  .footer-links { display:flex; gap:28px; flex-wrap:wrap; }
+  .footer-links a { color:rgba(255,255,255,0.70); text-decoration:none; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; transition:color 0.2s; }
+  .footer-links a:hover { color:white; }
+  .main-site-link { display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.78rem; border:1px solid rgba(255,255,255,0.18); padding:9px 16px; transition:all 0.2s; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; }
+  .main-site-link:hover { color:white; border-color:rgba(255,255,255,0.3); }
+  .footer-bottom { display:flex; justify-content:space-between; font-size:0.72rem; color:rgba(255,255,255,0.58); flex-wrap:wrap; gap:9px; }
+</style>
+</head>
+<body>
+
+<!-- Emergency Bar -->
+<div class="emergency-bar">
+  🚨 JUST IN AN ACCIDENT? Same-day appointments available — Call now: <a href="tel:7704295555">(770) 429-5555</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="logo-block">
+    <div class="logo-main">Marietta Accident Chiropractor</div>
+    <div class="logo-sub">Dr. Robert Mattson, D.C. · Due West Chiropractic · Personal Injury Since 2007</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#why">Why Dr. Mattson</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#attorneys">For Attorneys</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:7704295555" class="nav-phone">(770) 429-5555</a></li>
+    <li><a href="#contact" class="nav-cta">🚨 Request Appointment</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">Accepting New Accident Patients — Marietta · West Cobb · Kennesaw · Acworth · Powder Springs · Paulding County</div>
+      <h1>
+        <span class="red">HURT</span><br>
+        IN A<br>
+        <span class="outline">CRASH?</span>
+      </h1>
+      <p class="hero-sub">Dr. Mattson has treated auto accident patients since 2007 — serving Marietta, West Cobb, Kennesaw, Acworth, Powder Springs, and Paulding County. From fender-benders to semi-truck collisions, we've seen it, treated it, and know exactly how to document it for your attorney.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-red">🚨 Get Emergency Appointment</a>
+        <a href="#contact" class="btn-outline-w">📋 Free Case Review</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="panel-title">Why You Must Act Now</div>
+      <div class="urgency-item">
+        <div class="u-icon">⚠️</div>
+        <div><h4>Injuries Hide for Days</h4><p>Whiplash, soft tissue damage, and nerve injuries often don't appear until 24–72 hours after impact. Early documentation protects your health and your claim.</p></div>
+      </div>
+      <div class="urgency-item">
+        <div class="u-icon">📋</div>
+        <div><h4>Documentation is Everything</h4><p>Without proper medical records starting from day one, your attorney's case is significantly weaker. We know exactly how to document your injuries.</p></div>
+      </div>
+      <div class="urgency-item">
+        <div class="u-icon">⏰</div>
+        <div><h4>Georgia's 2-Year Window</h4><p>Georgia has a 2-year statute of limitations on personal injury claims. Delays in treatment can hurt your case. Don't wait — call today.</p></div>
+      </div>
+      <div class="call-box">
+        <p>Call or Text Right Now</p>
+        <strong>(770) 429-5555</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT DIVIDER -->
+<div class="stat-divider">
+  <div class="stat-d"><span>2007</span> Treating PI Patients Since</div>
+  <div class="stat-d"><span>48hr</span> Guaranteed Appointment</div>
+  <div class="stat-d"><span>Same</span> Day Often Available</div>
+  <div class="stat-d"><span>Multiple</span> Attorney Relationships</div>
+</div>
+
+<!-- WHY DR. MATTSON -->
+<section class="sec why-bg" id="why">
+  <div class="sec-inner">
+    <div class="why-header">
+      <div>
+        <div class="sec-tag">Why Choose Dr. Mattson</div>
+        <h2 class="sec-title">Not All Chiropractors Know PI Cases</h2>
+      </div>
+      <p class="sec-sub">Personal injury cases require more than good treatment — they require expertise in documentation, attorney communication, and file preparation that holds up legally. Dr. Mattson has built exactly that expertise since 2007.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>PI Expertise Since 2007</h3>
+        <p>Nearly two decades treating accident patients means Dr. Mattson knows exactly what injuries to look for, how to treat them, and how to document them properly for your personal injury case.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Attorney-Ready Documentation</h3>
+        <p>Our staff works directly with law firms. Files are prepared professionally and communicated regularly — no chasing records, no delays, no surprises on either side.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Individual Patient Care</h3>
+        <p>Every patient gets a personalized treatment plan. Dr. Mattson is hands-on with every case — you won't be passed off to an assistant or rushed through a cookie-cutter protocol.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>Fender-Benders to Semis</h3>
+        <p>Whether you had a low-speed parking lot collision or a high-impact commercial truck crash, we have the experience to accurately evaluate and treat the full range of crash injuries.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>Full Referral Network</h3>
+        <p>When you need an MRI, specialist, or other diagnostic services, we coordinate referrals directly through our office — nothing falls through the cracks.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>Same-Day &amp; 48-Hour Access</h3>
+        <p>Same-day appointments are often available. We guarantee you're seen within 48 hours. In PI cases, early treatment timing is critical — we make sure you don't lose it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec exp-bg">
+  <div class="sec-inner">
+    <div class="exp-inner">
+      <div class="exp-stats">
+        <div class="exp-stat"><strong>2007</strong><span>PI Practice Began</span></div>
+        <div class="exp-stat"><strong>500+</strong><span>PI Patients Treated</span></div>
+        <div class="exp-stat"><strong>Multi</strong><span>Trusted Law Firms</span></div>
+        <div class="exp-stat"><strong>48hr</strong><span>Guaranteed Access</span></div>
+      </div>
+      <div>
+        <div class="sec-tag">Dr. Mattson's Experience</div>
+        <h2 class="sec-title">Trusted by Attorneys. Trusted by Patients.</h2>
+        <div class="exp-quote">
+          <p>"I've made it my mission to understand not just how to treat auto accident injuries — but how to build the kind of documented care that supports your attorney and your recovery simultaneously."</p>
+          <cite>— Dr. Robert Mattson, D.C. · Due West Chiropractic</cite>
+        </div>
+        <ul class="exp-list">
+          <li>Treating auto accident patients continuously since 2007</li>
+          <li>Active working relationships with multiple Atlanta-area PI law firms</li>
+          <li>Staff trained to communicate directly and regularly with legal teams</li>
+          <li>MedPay, health insurance, and PI lien billing all handled in-office</li>
+          <li>Expertise in injury documentation for insurance and legal proceedings</li>
+          <li>Referral partnerships with MRI facilities and specialists</li>
+          <li>Experienced with cases from minor whiplash to multi-trauma collisions</li>
+          <li>Serving Marietta, West Cobb, Kennesaw, Acworth, Powder Springs &amp; Paulding County</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec proc-bg" id="process">
+  <div class="sec-inner">
+    <div class="proc-header">
+      <div class="sec-tag">How It Works</div>
+      <h2 class="sec-title">From Call to Recovery in 5 Steps</h2>
+      <p class="sec-sub">We make the process as simple as possible. Your only job is to focus on getting better.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step">
+        <div class="step-num">01</div>
+        <h4>Call Us</h4>
+        <p>Call or text (770) 429-5555. We'll get you in same-day or within 48 hours guaranteed.</p>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">02</div>
+        <h4>Full Evaluation</h4>
+        <p>Comprehensive injury assessment. We find everything and document everything from visit one.</p>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">03</div>
+        <h4>Treatment Plan</h4>
+        <p>Custom care plan based on your specific injuries, recovery goals, and legal timeline.</p>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">04</div>
+        <h4>Attorney Coordination</h4>
+        <p>Our staff communicates directly with your legal team throughout the entire process.</p>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">05</div>
+        <h4>Full Recovery</h4>
+        <p>We treat until you're better — and coordinate referrals when additional care is needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INJURIES -->
+<section class="sec inj-bg">
+  <div class="sec-inner">
+    <div class="inj-inner">
+      <div>
+        <div class="sec-tag">Common Injuries We Treat</div>
+        <h2 class="sec-title">What Happens to Your Body in a Crash</h2>
+        <p class="sec-sub" style="margin-bottom:20px;">Many accident victims feel fine immediately after a crash — only to wake up days later in serious pain. Adrenaline masks pain, and soft tissue injuries take time to fully manifest. Don't wait to find out.</p>
+        <div class="urgent-box">
+          <h4>⚠️ Don't Wait to Be Seen</h4>
+          <p>Documenting your injuries starting from day one protects both your health and your legal claim. Insurance companies use gaps in treatment to minimize payouts. Call us the same day or the morning after your accident — same-day appointments are often available.</p>
+        </div>
+      </div>
+      <div class="inj-grid">
+        <div class="inj-card"><div class="inj-icon">🔄</div><h4>Whiplash</h4><p>The most common crash injury. Cervical strain from rapid head movement causes lasting pain if untreated.</p></div>
+        <div class="inj-card"><div class="inj-icon">💢</div><h4>Herniated Discs</h4><p>Impact force can rupture spinal discs, causing nerve compression, shooting pain, and numbness.</p></div>
+        <div class="inj-card"><div class="inj-icon">🦴</div><h4>Soft Tissue Damage</h4><p>Muscle tears, ligament sprains, and connective tissue injuries that can take months to heal without treatment.</p></div>
+        <div class="inj-card"><div class="inj-icon">⚡</div><h4>Nerve Compression</h4><p>Pinched nerves from spinal displacement cause radiating pain, tingling, and weakness in arms or legs.</p></div>
+        <div class="inj-card"><div class="inj-icon">🤕</div><h4>Headaches &amp; Concussion</h4><p>Post-accident headaches, dizziness, and cognitive symptoms that require prompt evaluation and documentation.</p></div>
+        <div class="inj-card"><div class="inj-icon">🚑</div><h4>Multi-Trauma Injuries</h4><p>From shoulder and knee injuries to complex spinal trauma from high-speed or commercial vehicle collisions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTORNEY SECTION -->
+<section class="sec atty-bg" id="attorneys">
+  <div class="sec-inner">
+    <div class="atty-inner">
+      <div>
+        <div class="sec-tag">For Personal Injury Attorneys</div>
+        <h2 class="sec-title">A Chiropractor Your Clients Can Trust</h2>
+        <p class="sec-sub">Dr. Mattson understands what PI attorneys need — thorough documentation, timely communication, and a provider who doesn't drop the ball. We've built our practice around being the best possible partner for your firm.</p>
+        <div class="atty-features">
+          <div class="atty-feat"><span>📋</span><p>Professional, attorney-ready documentation and file preparation</p></div>
+          <div class="atty-feat"><span>📞</span><p>Dedicated staff for direct, regular law firm communication</p></div>
+          <div class="atty-feat"><span>🔬</span><p>MRI and specialist referrals coordinated through our office</p></div>
+          <div class="atty-feat"><span>⚡</span><p>Same-day or 48-hour guaranteed patient intake</p></div>
+          <div class="atty-feat"><span>💳</span><p>MedPay, health insurance, and PI lien billing all handled</p></div>
+          <div class="atty-feat"><span>🤝</span><p>Established trust with multiple Atlanta-area PI law firms</p></div>
+        </div>
+      </div>
+      <div class="atty-cta-box">
+        <h3>Refer a Client Today</h3>
+        <p>If you're a personal injury attorney looking for a reliable chiropractic partner, Dr. Mattson has built his PI practice entirely on professional relationships and consistent results. We'd love to connect.</p>
+        <a href="tel:7704295555" class="btn-white">📞 Call (770) 429-5555</a>
+        <a href="#contact" class="btn-ghost">📋 Send Us a Message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DR. MATTSON BIO -->
+<section class="sec dr-bg">
+  <div class="sec-inner">
+    <div class="dr-inner">
+      <div class="photo-box">
+        <div class="p-icon">📸</div>
+        <div class="p-label">Dr. Bob Mattson</div>
+        <div class="p-sub">Add headshot photo here</div>
+      </div>
+      <div>
+        <div class="sec-tag">About Your Doctor</div>
+        <div class="dr-name">Dr. Robert "Bob" Mattson</div>
+        <div class="dr-title-r">Doctor of Chiropractic · Due West Chiropractic &amp; Rehab · Marietta, GA</div>
+        <p class="dr-bio">Dr. Mattson is the founder and owner of Due West Chiropractic &amp; Rehab in Marietta, Georgia — a family owned practice he and his wife Molly have built together since 2007. He serves auto accident patients throughout Marietta, West Cobb, Kennesaw, Acworth, Powder Springs, and Paulding County, and has developed deep expertise in personal injury care that has earned him the trust of patients and attorneys alike across the greater Atlanta area.</p>
+        <p class="dr-bio">A graduate of Life University and Youngstown State University, he treats every accident patient with the same individualized attention — building a treatment plan that supports both your physical recovery and your legal case.</p>
+        <ul class="dr-creds">
+          <li>Doctor of Chiropractic – Life University</li>
+          <li>B.S. – Youngstown State University</li>
+          <li>Personal Injury expertise since 2007</li>
+          <li>Active PI attorney referral relationships — Atlanta metro</li>
+          <li>MedPay, health insurance &amp; PI lien billing</li>
+          <li>MRI &amp; specialist referral network</li>
+          <li>Founder — Due West Chiropractic &amp; Rehab, Marietta GA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec test-bg">
+  <div class="sec-inner">
+    <div class="sec-tag">What They're Saying</div>
+    <h2 class="sec-title">Real Results. Real Recovery.</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"After my car accident I was in serious pain and had no idea what to do. Dr. Mattson's office got me in the next morning, ran a complete evaluation, and had a treatment plan ready immediately. He knew exactly how to handle everything with my attorney."</p>
+        <div class="test-name">Jennifer K.<span>Rear-End Collision, Marietta</span></div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"I was in a serious semi-truck accident and Dr. Mattson was thorough, professional, and genuinely compassionate. His team coordinated with my PI attorney every step of the way. I don't know what I would have done without this office."</p>
+        <div class="test-name">David L.<span>Commercial Truck Accident</span></div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Dr. Mattson is my first call when a client needs chiropractic care after an accident. His documentation is impeccable, his staff is responsive, and most importantly — his patients actually get better. Highest recommendation."</p>
+        <div class="test-name">T. Moore, Esq.<span>Personal Injury Attorney, Atlanta</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="sec contact-bg" id="contact">
+  <div class="sec-inner">
+    <div class="contact-inner">
+      <div>
+        <div class="sec-tag">Contact Us</div>
+        <h2 class="sec-title">Don't Wait. Call Today.</h2>
+        <p class="sec-sub">Every day you wait after an accident is a day that can hurt your recovery and your case. Same-day appointments are often available — we're here to help you move fast.</p>
+        <div class="contact-info">
+          <div class="c-item">
+            <div class="c-icon">📞</div>
+            <div><h4>Call or Text</h4><p>(770) 429-5555<br>Same-day &amp; 48hr guaranteed</p></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📍</div>
+            <div><h4>Office Location</h4><p>3894 Due West Road, Suite 210<br>Marietta, GA 30064</p></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">✉️</div>
+            <div><h4>Email</h4><p>info@mariettaaccidentchiropractor.com</p></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">🕐</div>
+            <div><h4>Office Hours</h4><p>Mon, Wed, Fri: 9:30am–1pm &amp; 3–6pm<br>Emergency consultations available</p></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">💳</div>
+            <div><h4>Billing</h4><p>MedPay · Health Insurance · PI Lien · Self-Pay</p></div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">🌐</div>
+            <div><h4>Main Practice Website</h4><a href="https://www.duewestchiropractic.com">→ duewestchiropractic.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-form">
+        <h3>Free Consultation Request</h3>
+        <p>Fill out the form and we'll contact you within hours. For urgent needs call or text (770) 429-5555 directly.</p>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone *</label><input type="tel" placeholder="(770) 000-0000" required></div>
+          <div class="form-group"><label>Date of Accident</label><input type="date"></div>
+        </div>
+        <div class="form-group">
+          <label>Type of Accident *</label>
+          <select required>
+            <option value="">Select accident type...</option>
+            <option>Rear-End Collision</option>
+            <option>Side-Impact / T-Bone</option>
+            <option>Head-On Collision</option>
+            <option>Commercial / Semi-Truck</option>
+            <option>Rideshare (Uber/Lyft)</option>
+            <option>Hit and Run</option>
+            <option>Parking Lot / Low Speed</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Do You Have an Attorney?</label>
+            <select>
+              <option value="">Select...</option>
+              <option>Yes — I have a PI attorney</option>
+              <option>No — but I need one</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How Will You Pay?</label>
+            <select>
+              <option value="">Select...</option>
+              <option>MedPay / Auto Insurance</option>
+              <option>PI Attorney / Lien</option>
+              <option>Health Insurance</option>
+              <option>Self-Pay / Cash</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Describe Your Symptoms</label><textarea placeholder="Neck pain, back pain, headaches, shoulder soreness, numbness — anything you're experiencing since the accident..."></textarea></div>
+        <button class="form-submit" type="submit">🚨 Request Free Consultation</button>
+        <p class="form-disclaimer">Your information is 100% confidential. We will never share your details without your written consent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-main">Marietta Accident Chiropractor</div>
+        <p>Dr. Robert Mattson, D.C. has been treating auto accident patients since 2007. Serving Marietta, West Cobb, Kennesaw, Acworth, Powder Springs, and Paulding County. Trusted by patients and personal injury attorneys throughout the greater Atlanta area.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#why">Why Dr. Mattson</a>
+        <a href="#process">How It Works</a>
+        <a href="#attorneys">For Attorneys</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="https://www.duewestchiropractic.com" class="main-site-link">← Due West Chiropractic</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Due West Chiropractic &amp; Rehab · Dr. Robert Mattson, D.C. · 3894 Due West Road, Suite 210, Marietta, GA 30064 · (770) 429-5555</p>
+      <p>This site is for informational purposes only and does not constitute legal advice.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SEO Location Keywords -->
+<div style="display:none;" aria-hidden="true">
+  Auto accident chiropractor Marietta GA. Car accident chiropractor Kennesaw GA. Auto injury chiropractor Acworth GA. Car accident chiropractor West Cobb GA. Auto accident chiropractor Powder Springs GA. Car accident chiropractor Paulding County GA. Personal injury chiropractor Marietta. Whiplash treatment Marietta GA. Whiplash treatment Kennesaw GA. Chiropractor after car accident Marietta. Chiropractor after car accident Kennesaw. Chiropractor after car accident Acworth. Same day accident chiropractor Marietta. Personal injury chiropractor West Cobb. MedPay chiropractor Marietta GA. Dr Robert Mattson chiropractor Marietta GA.
+</div>
+
+</body>
+</html>
